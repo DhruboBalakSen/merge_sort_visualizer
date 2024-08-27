@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+/* .gradient-background {
+  background: linear-gradient(300deg, #008170, #005b41, #232d3f);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+  height: 100vh;
+} */
+
+/* @keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+.global {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+.waves{
+  background-image: url('../public/waves.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}

@@ -1,0 +1,131 @@
+.array-container {
+  font-weight: 650;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 10px 20px;
+  height: 300px;
+  width: max-content;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.array-bar {
+  width: 20px;
+  margin: 0 2px;
+  background-color: rgb(0, 120, 218);
+  text-align: center;
+  color: rgb(44, 44, 44);
+  font-size: 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.main {
+  display: flex;
+  gap: 21px;
+}
+
+button {
+  width: 180px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  background-color: azure;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #0f0f0f;
+  color: azure;
+}
+
+#arraySize {
+  border: 0;
+  border-radius: 5px;
+  background-color: azure;
+}
+
+#delayRange {
+  color: #0f0f0f;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label{
+  font-size: 18px;
+}
+
+.glass-card {
+  padding: 20px;
+    backdrop-filter: blur(2px) saturate(100%);
+    -webkit-backdrop-filter: blur(2px) saturate(100%);
+    background-color: rgba(221, 234, 255, 0.24);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+
+.hover-effect-input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.hover-effect-input:hover {
+  transform: scale(1.05);
+}
+
+.styled-range {
+  appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.styled-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
