@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-visualizer',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './visualizer.component.html',
   styleUrls: ['./visualizer.component.css'],
 })
@@ -13,6 +13,7 @@ export class VisualizerComponent implements OnInit {
   array: number[] = [];
   delay: number = 100;
   arraySize: number = 20;
+  timer: number = 0;
 
   constructor() {}
 
@@ -21,6 +22,8 @@ export class VisualizerComponent implements OnInit {
   }
 
   resetArray(): void {
+    this.delay = 100;
+    this.timer = 0;
     this.array = [];
     for (let i = 0; i < this.arraySize; i++) {
       this.array.push(Math.floor(Math.random() * 100));
@@ -87,18 +90,20 @@ export class VisualizerComponent implements OnInit {
   }
 
   async startSorting(): Promise<void> {
+    let startTime = performance.now();
     await this.mergeSort(this.array, 0, this.array.length - 1);
+    let endTime = performance.now();
+    this.timer = (endTime - startTime) / 1000;
   }
 
   updateArraySize(size: number): void {
-    if(size > 60){
-      alert("Array Size should be 60 or less that 60")
+    if (size > 60) {
+      alert('Array Size should be 60 or less than 60');
       this.arraySize = 60;
-    }
-    else{
+    } else {
       this.arraySize = size;
     }
-    
+
     this.resetArray();
   }
 
