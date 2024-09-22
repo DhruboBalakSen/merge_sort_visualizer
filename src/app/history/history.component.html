@@ -1,0 +1,22 @@
+<!-- <ul >
+    <li>Unsorted:  | Sorted: {{ array.sorted_array }} | Delay: {{ array.delay }}ms | Time Taken: </li>
+</ul> -->
+
+<div class="container">
+  <table>
+    <thead>
+      <th class="left-corner">Unsorted</th>
+      <th>Sorted</th>
+      <th>Delay</th>
+      <th class="right-corner">Time Taken</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let array of arrays">
+        <td>{{ array.unsorted_array | json}}</td>
+        <td>{{ array.sorted_array | json }}</td>
+        <td>{{ array.delay }}ms</td>
+        <td>{{ array.time_taken }}ms</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
