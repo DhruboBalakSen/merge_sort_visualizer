@@ -1,10 +1,10 @@
-# MergeSortVisualizer
+# Merge Sort Visualizer
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
 
 ## Steps to run the project
 
-Run `npm install`. cd to backend and run `node server.js`.
+Run `npm install`. cd to backend and run `node server.js` to connect with Mongodb.
 
 ## Development server
 
